@@ -10,10 +10,10 @@ do konsoli */
 function triangle() {
   var a = prompt("Podaj bok trójkąta");
   var h = prompt("Podaj wysokośc trójkąta");
-  var triangleArea = 0;
-
-  triangleArea = a * h / 2;
-  alert("Pole trójkąta wynosi" + triangleArea);
+  var triangleAreaCount = `${a} * ${h / 2}`;
+  var triangleAreaCalue = a * (h / 2);
+  alert("Pole trójkąta wg obliczeń " +triangleAreavalue);
+  // alert("Pole trójkąta wg obliczeń" + triangleAreacount "wynosi "+triangleAreavalue); jak w alert dać text + zmienna , text + zmiena ??
 
   console.log(
     "Triangle field with base a: " +
