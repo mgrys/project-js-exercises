@@ -23,6 +23,10 @@ watch: {
     }
 },
 
+    jshint: {
+      all: ['js/*.js']
+  },
+
 browserSync: {
   default_options: {
     bsFiles: {
@@ -56,9 +60,10 @@ imagemin: {
   // Load the plugins tasks
 grunt.loadNpmTasks('grunt-sass');
 grunt.loadNpmTasks('grunt-contrib-watch');
+grunt.loadNpmTasks('grunt-contrib-jshint');
 grunt.loadNpmTasks('grunt-contrib-imagemin');
 grunt.loadNpmTasks('grunt-browser-Sync');
 
   // Default task(s).
-  grunt.registerTask('default', ['browserSync', 'sass', 'watch', 'imagemin']);
+  grunt.registerTask('default', ['browserSync', 'sass', 'watch','jshint', 'imagemin']);
 };
