@@ -29,7 +29,9 @@ function triangle() {
 function count() {
   var a = prompt("podaj wartosc zmiennej a");
   var b = prompt("podaj wartośc zmiennej b");
+ // var area = `(a * a) + (2 * a * b) - (b * b)`;
   var value = a * a + 2 * a * b - b * b;
+  //console.log("Wynik działania  =" ${area});
   console.log("Wynik działania (a * a) + (2 * a * b) - (b * b) =" + value);
   //sprawdzenie czy value ma wynik dodatni lub ujemny, wynik na konsoli
   if (value > 0) {
