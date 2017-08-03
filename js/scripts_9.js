@@ -42,16 +42,33 @@ while (agree) {
   answerUp = answer.toUpperCase();
   if (answerUp === "TAK") {
     agree = true;
-  } else  {
+  } else {
     agree = false;
   }
   console.log("Rozszerzona tablica imion" + allNames);
 }
-*/
-//exercise 9.3 
-var text = 'Velociraptor is a genus of herbivorous ceratopsid dinosaur that first appeared during the late Maastrichtian stage of the late Cretaceous period.';
-var dinosaur = 'Triceratops'.toUpperCase();
-var textAfterChange = text.replace('Velociraptor',dinosaur);
-var halftext = textAfterChange.substring(0,(textAfterChange.length)/2);
-console.log (halftext);
 
+//exercise 9.3
+var text =
+  "Velociraptor is a genus of herbivorous ceratopsid dinosaur that first appeared during the late Maastrichtian stage of the late Cretaceous period.";
+var dinosaur = "Triceratops".toUpperCase();
+var textAfterChange = text.replace("Velociraptor", dinosaur);
+var halftext = textAfterChange.substring(0, textAfterChange.length / 2);
+console.log(halftext);*/
+
+//exercise 9.4
+function drawTree() {
+  var depthTree = 10;
+  isdigital = true;
+  var starTab = ["X"];
+  while (isdigital) {
+    depthTree = prompt("Podaj wysokość choinki w l. całkowitych");
+    isdigital = isNaN(depthTree);
+  }
+  for (var index = 0; index < depthTree; index++) {
+    starPrint = starTab.toString();
+    console.log(starPrint);
+    starTab.push("X");
+  }
+}
+drawTree();
