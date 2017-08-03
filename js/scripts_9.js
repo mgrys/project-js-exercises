@@ -64,6 +64,9 @@ function drawTree() {
   while (isdigital) {
     depthTree = prompt("Podaj wysokość choinki w l. całkowitych");
     isdigital = isNaN(depthTree);
+    if (isdigital) {
+        alert ('Podaj liczbę zamiast tekstu !!!');
+    }
   }
   for (var index = 0; index < depthTree; index++) {
     starPrint = starTab.toString();
@@ -71,4 +74,29 @@ function drawTree() {
     starTab.push("X");
   }
 }
+function drawTree1() {
+  var depthTree = 10;
+  isdigital = true;
+  var starTab = ["X"];
+  while (isdigital) {
+    depthTree = prompt("Podaj wysokość choinki w l. całkowitych");
+    isdigital = isNaN(depthTree);
+    if (isdigital) {
+        alert ('Podaj liczbę zamiast tekstu !!!');
+    }
+  }
+  for (var index = 0; index < depthTree; index++) {
+    for (var i=0;i<index;i++){
+    starTab+= '*';
+    console.log(starTab);
+    }
+  }
+}
+var start = new Date().getTime();
 drawTree();
+var end = new Date().getTime(); 
+var start1 = new Date().getTime();
+drawTree1();
+var end1 = new Date().getTime(); 
+alert ('Generowanie choinki 1 sposób trwało' +((end - start) / 1000), ' sekund');
+alert ('Generowanie choinki 2 sposób trwało' +((end1 - start1) / 1000), ' sekund');
