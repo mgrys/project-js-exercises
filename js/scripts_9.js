@@ -57,6 +57,7 @@ var halftext = textAfterChange.substring(0, textAfterChange.length / 2);
 console.log(halftext);*/
 
 //exercise 9.4
+/*
 function drawTree() {
   var depthTree = 10;
   isdigital = true;
@@ -65,7 +66,7 @@ function drawTree() {
     depthTree = prompt("Podaj wysokość choinki w l. całkowitych");
     isdigital = isNaN(depthTree);
     if (isdigital) {
-        alert ('Podaj liczbę zamiast tekstu !!!');
+      alert("Podaj liczbę zamiast tekstu !!!");
     }
   }
   for (var index = 0; index < depthTree; index++) {
@@ -74,29 +75,42 @@ function drawTree() {
     starTab.push("X");
   }
 }
+*/
+/*
 function drawTree1() {
   var depthTree = 10;
   isdigital = true;
-  var starTab = ["X"];
+  var starTab1 = [" "];
   while (isdigital) {
     depthTree = prompt("Podaj wysokość choinki w l. całkowitych");
     isdigital = isNaN(depthTree);
     if (isdigital) {
-        alert ('Podaj liczbę zamiast tekstu !!!');
+      alert("Podaj liczbę zamiast tekstu !!!");
     }
   }
-  for (var index = 0; index < depthTree; index++) {
-    for (var i=0;i<index;i++){
-    starTab+= '*';
-    console.log(starTab);
-    }
-  }
+for(var i=1;i<=n;i++) {
+		for(j=n-1; j>=i; j--) document.write("&nbsp;");
+		for(j=1; j<=(2*i-1); j++) document.write('*');
+        document.write("<br />");
 }
+}
+drawTree1();
+
 var start = new Date().getTime();
 drawTree();
-var end = new Date().getTime(); 
+var end = new Date().getTime();
 var start1 = new Date().getTime();
 drawTree1();
-var end1 = new Date().getTime(); 
-alert ('Generowanie choinki 1 sposób trwało' +((end - start) / 1000), ' sekund');
-alert ('Generowanie choinki 2 sposób trwało' +((end1 - start1) / 1000), ' sekund');
+var end1 = new Date().getTime();
+alert("Generowanie choinki 1 sposób trwało" + (end - start) / 1000, " sekund");
+alert(
+  "Generowanie choinki 2 sposób trwało" + (end1 - start1) / 1000,
+  " sekund"
+);
+*/
+//excercise 9.5
+var buttonVar = document.getElementsByClassName('buttons');
+var buttonCount = buttonVar.length;
+for (var index = 0; index < buttonCount; index++) {
+    alert(buttonVar.item(index).innerText) ;
+}
