@@ -108,9 +108,22 @@ alert(
   " sekund"
 );
 */
+/*
 //excercise 9.5
-var buttonVar = document.getElementsByClassName('buttons');
+var buttonVar = document.getElementsByClassName("buttons");
 var buttonCount = buttonVar.length;
 for (var index = 0; index < buttonCount; index++) {
-    alert(buttonVar.item(index).innerText) ;
+  alert(buttonVar.item(index).innerText);
 }
+*/
+//excersise 9.6
+
+var list = document.getElementById("list");
+var add = document.getElementById("addElem");
+
+add.addEventListener("click", function() {
+  var element = document.createElement("li");
+  var countList = list.childElementCount;
+  element.innerHTML = "item " +countList;
+  list.appendChild(element);
+});
