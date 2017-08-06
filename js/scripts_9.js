@@ -120,6 +120,7 @@ for (var index = 0; index < buttonCount; index++) {
 
 var list = document.getElementById("list");
 var add = document.getElementById("addElem");
+var remove = document.getElementById("removeElem");
 
 add.addEventListener("click", function() {
   var element = document.createElement("li");
@@ -127,3 +128,11 @@ add.addEventListener("click", function() {
   element.innerHTML = "item " +countList;
   list.appendChild(element);
 });
+//remove last list element by button pressing
+remove.addEventListener("click", function(){
+   list.lastElementChild.remove();
+})
+//remove last list element by directly element pressing !!
+list.onclick = function () {
+  this.lastElementChild.remove();
+};
